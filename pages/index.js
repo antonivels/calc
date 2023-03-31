@@ -4,6 +4,19 @@ import { useState } from 'react';
 
 export default function Home() {
   const [output, setOutput] = useState([]);
+
+  function pluschecker() {
+    if (
+      output[output.length - 1] == '+' ||
+      output[output.length - 1] == '-' ||
+      output[output.length - 1] == '*' ||
+      output[output.length - 1] == '/'
+    ) {
+      setOutput(output.substr(0, output.length - 1));
+    }
+    setOutput(output + '+');
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -109,7 +122,7 @@ export default function Home() {
         ///////////////////////// noumera////////////////////////// */}
 
         <div className="row4">
-          <button className="button" onClick={() => setOutput(output + '+')}>
+          <button className="button" onClick={() => pluschecker()}>
             +
           </button>
           <button className="button" onClick={() => setOutput(output + '-')}>
@@ -149,6 +162,6 @@ export default function Home() {
 //   setOutput(output);
 // }
 
-if() {
-
-}
+// <button className="button" onClick={() => setOutput(output + '+')}>
+// +
+// </button>
