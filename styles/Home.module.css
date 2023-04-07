@@ -11,15 +11,7 @@
   border: 2px solid;
   width: 200px;
   height: 30px;
-}
-
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #4b8378;
 }
 
 .main {
@@ -29,6 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #e4d7d0;
 }
 
 .footer {
